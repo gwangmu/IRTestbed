@@ -6,9 +6,10 @@ needed).
 
 ## Setup
 
-1. Enter this directory. 
+1. Clone the repository. 
 
 ```
+$ git clone git remote add origin git@github.com:gwangmu/IRTestbed.git
 $ cd IRTestbed
 ```
 
