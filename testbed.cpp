@@ -1,8 +1,7 @@
 #include "testbed.h"
+#include <iostream>
 
 using namespace llvm;
-
-#include <iostream>
 
 bool IRTestbed::runOnModule(Module &M) {
   // TODO: your ModulePass test here.
