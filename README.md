@@ -37,3 +37,9 @@ $ make
     - The directory that contains `bin`, `lib`, and `include` directories
       created after building and installing LLVM or, if you're using a prebuilt
       binary, its root directory itself.
+
+## What you can get
+
+* (Obviously) ready-to-use LLVM IR pass testbed.
+* How to build an LLVM plugin with CMake. (-> CMakeFiles.txt)
+* How to write a compiler wrapper with C. (-> wrapper.cpp)
