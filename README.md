@@ -32,6 +32,7 @@ $ LLVM_ROOT=<absolute/path/to/llvm/install/dir> make
 1. Implement a module pass in `testbed.cpp::IRTestbed::run()`.
 2. Make again.
 3. Use `tb-clang` and `tb-clang++` in `build` as C/C++ compilers.
+  - The module pass is applied to compiled C/C++ source code.
 
 ## FAQ
 
