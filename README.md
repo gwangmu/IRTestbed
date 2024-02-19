@@ -1,8 +1,6 @@
 # Ready-made LLVM IR ModulePass testbed
 
-LLVM IR ModulePass testbed with definitely no boilerplate coding. Tested with
-LLVM 15. Probably also work with later versions too (with tiny adjustment if
-needed).
+LLVM IR ModulePass testbed with zero boilerplate coding. Tested with LLVM 15. It probably also works with later versions (with tiny adjustments if needed).
 
 ## Setup
 
