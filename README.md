@@ -27,6 +27,8 @@ $ make
 $ LLVM_ROOT=<absolute/path/to/llvm/install/dir> make
 ```
 
+3. Check `build` for built binaries (`tb-clang`/`tb-clang++`).
+
 ## Usage
 
 1. Implement a module pass in `testbed.cpp::IRTestbed::run()`.
