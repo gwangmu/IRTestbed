@@ -13,13 +13,15 @@ $ git clone git remote add origin git@github.com:gwangmu/IRTestbed.git
 $ cd IRTestbed
 ```
 
-2. [With system-wide LLVM] Just make.
+2. Make.
+
+(With system-wide LLVM)
 
 ```
 $ make
 ```
 
-[Without system-wide LLVM] Specify the LLVM install directory and make.
+(Without system-wide LLVM) Specify the LLVM install directory to `LLVM_ROOT` and make.
 
 ```
 $ LLVM_ROOT=<absolute/path/to/llvm/install/dir> make
