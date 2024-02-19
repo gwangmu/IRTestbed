@@ -13,22 +13,22 @@ using namespace llvm;
 
 class IRTestbed : public PassInfoMixin<IRTestbed> {
 public:
-	PreservedAnalyses run(Module &M, ModuleAnalysisManager &MAM);
+  PreservedAnalyses run(Module &M, ModuleAnalysisManager &MAM);
 };
 
 PreservedAnalyses IRTestbed::run(Module &M, ModuleAnalysisManager &MAM) {
-	// TODO: your pass code.
+  // TODO: your pass code.
 
   return PreservedAnalyses::all();
 }
 
 extern "C" ::llvm::PassPluginLibraryInfo LLVM_ATTRIBUTE_WEAK
 llvmGetPassPluginInfo() {
-	return {LLVM_PLUGIN_API_VERSION, "IRTestbed", "v0.0",
-		[](PassBuilder &PB) {
-			PB.registerOptimizerLastEPCallback(
-				[](ModulePassManager &MPM, OptimizationLevel OL) {
-					MPM.addPass(IRTestbed());
-				});
-		}};
+  return {LLVM_PLUGIN_API_VERSION, "IRTestbed", "v0.0",
+    [](PassBuilder &PB) {
+      PB.registerOptimizerLastEPCallback(
+        [](ModulePassManager &MPM, OptimizationLevel OL) {
+          MPM.addPass(IRTestbed());
+        });
+    }};
 }
