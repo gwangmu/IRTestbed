@@ -13,7 +13,8 @@ $ git clone git remote add origin git@github.com:gwangmu/IRTestbed.git
 $ cd IRTestbed
 ```
 
-2. Create a symbolic link to the LLVM install directory at `llvm`.
+2. Create a symbolic link to the LLVM install directory at `llvm` (or just unzip
+   the pre-built LLVM to `llvm`).
 
 ```
 $ ln -s <path/to/llvm/install> llvm
