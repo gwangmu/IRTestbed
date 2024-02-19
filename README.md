@@ -13,22 +13,21 @@ $ git clone git remote add origin git@github.com:gwangmu/IRTestbed.git
 $ cd IRTestbed
 ```
 
-2. Create a symbolic link to the LLVM install directory at `llvm` (or just unzip
-   the pre-built LLVM to `llvm`).
-
-```
-$ ln -s <path/to/llvm/install> llvm
-```
-
-3. Make.
+2. [With system-wide LLVM] Just make.
 
 ```
 $ make
 ```
 
+[Without system-wide LLVM] Specify the LLVM install directory and make.
+
+```
+$ LLVM_ROOT=<absolute/path/to/llvm/install/dir> make
+```
+
 ## Usage
 
-1. Implement a module pass in `testbed.cpp::runOnFunction()`.
+1. Implement a module pass in `testbed.cpp::IRTestbed::run()`.
 2. Make again.
 3. Use `build/tb-clang` and `build/tb-clang++` as C/C++ compilers.
 
