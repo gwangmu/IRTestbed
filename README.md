@@ -40,6 +40,8 @@ $ LLVM_ROOT=<absolute/path/to/llvm/install/dir> make
     - The directory that contains `bin`, `lib`, and `include` directories
       created after building and installing LLVM or, if you're using a prebuilt
       binary, its root directory itself.
+* Can I move `tb-clang`/`tb-clang++` to another directory?
+    - No, unfortunately, but you can always make symbolic links to them.
 
 ## What you can get
 
