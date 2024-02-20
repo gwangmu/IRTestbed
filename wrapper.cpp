@@ -41,14 +41,24 @@ int main(int argc, char** argv) {
     abort();
   }
 
-  std::string libpath = std::string(basepath + "/build/libIRTestbed.so");
+  std::string libpath = std::string(basepath + "/libIRTestbed.so");
+  std::string pass_plugin = "-fpass-plugin=" + libpath;
 
   cc_params[cc_par_cnt++] = (char*)"-Xclang";
-  cc_params[cc_par_cnt++] = (char*)"-flegacy-pass-manager";
+  cc_params[cc_par_cnt++] = (char*)pass_plugin.c_str();
+  
+  // TODO: uncomment the followings if needed.
+
+  /*  - if your analysis requires explicitly typed pointers in IR. 
   cc_params[cc_par_cnt++] = (char*)"-Xclang";
-  cc_params[cc_par_cnt++] = (char*)"-load";
+  cc_params[cc_par_cnt++] = (char*)"-no-opaque-pointers"; */
+
+  /*  - if your analysis precludes any inlining.
   cc_params[cc_par_cnt++] = (char*)"-Xclang";
-  cc_params[cc_par_cnt++] = (char*)libpath.c_str();
+  cc_params[cc_par_cnt++] = (char*)"-fno-inline"; */
+
+  /*  - if your analysis needs some debugging information by default.
+  cc_params[cc_par_cnt++] = (char*)"-g"; */
 
   while (--argc) {
     char* cur = *(++argv);

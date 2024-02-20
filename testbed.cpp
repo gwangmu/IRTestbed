@@ -9,6 +9,8 @@
 #include "llvm/Support/FileSystem.h"
 #include "llvm/Transforms/IPO/PassManagerBuilder.h"
 
+#include <iostream>
+
 using namespace llvm;
 
 class IRTestbed : public PassInfoMixin<IRTestbed> {
