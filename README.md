@@ -2,6 +2,10 @@
 
 LLVM IR ModulePass testbed with zero boilerplate coding. Tested with LLVM 15. It probably also works with later versions (with tiny adjustments if needed).
 
+## Prerequisites
+
+ - LLVM 15+ (either system-wide or local; pre-built binaries - OK)
+
 ## Setup
 
 1. Clone the repository. 
