@@ -41,7 +41,7 @@ $ LLVM_ROOT=<absolute/path/to/llvm/install/dir> make
       created after building and installing LLVM or, if you're using a prebuilt
       binary, its root directory itself.
 * Can I move `tb-clang`/`tb-clang++` to another directory?
-    - No, unfortunately, but you can always make symbolic links to them.
+    - No, unfortunately, but you can always make symbolic links to them or add the path to `build` to the `PATH` environment variable.
 
 ## What you can get
 
