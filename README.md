@@ -1,8 +1,10 @@
 # Ready-made LLVM IR ModulePass testbed
 
-LLVM IR ModulePass testbed with definitely no boilerplate coding. Tested with
-LLVM 15. Probably also work with later versions too (with tiny adjustment if
-needed).
+LLVM IR ModulePass testbed with zero boilerplate coding. Tested with LLVM 15. It probably also works with later versions unless they drastically change their APIs (again).
+
+## Prerequisites
+
+ - LLVM 15+ (either system-wide, source-code built, or [pre-built](https://releases.llvm.org/download.html))
 
 ## Setup
 
@@ -13,24 +15,28 @@ $ git clone git remote add origin git@github.com:gwangmu/IRTestbed.git
 $ cd IRTestbed
 ```
 
-2. Create a symbolic link to the LLVM install directory at `llvm` (or just unzip
-   the pre-built LLVM to `llvm`).
+2. Make.
 
-```
-$ ln -s <path/to/llvm/install> llvm
-```
-
-3. Make.
+(With system-wide LLVM)
 
 ```
 $ make
 ```
 
+(Without system-wide LLVM) Specify the LLVM install directory to `LLVM_ROOT` and make.
+
+```
+$ LLVM_ROOT=<absolute/path/to/llvm/install/dir> make
+```
+
+3. Check `build` for built binaries (`tb-clang`/`tb-clang++`).
+
 ## Usage
 
-1. Implement a module pass in `testbed.cpp::runOnFunction()`.
+1. Implement a module pass in `testbed.cpp::IRTestbed::run()`.
 2. Make again.
-3. Use `build/tb-clang` and `build/tb-clang++` as C/C++ compilers.
+3. Use `tb-clang` and `tb-clang++` in `build` as C/C++ compilers.
+    - The module pass is applied to compiled C/C++ source code.
 
 ## FAQ
 
@@ -38,6 +44,8 @@ $ make
     - The directory that contains `bin`, `lib`, and `include` directories
       created after building and installing LLVM or, if you're using a prebuilt
       binary, its root directory itself.
+* Can I move `tb-clang`/`tb-clang++` to another directory?
+    - No, unfortunately, but you can always make symbolic links to them or add a path to `build` to the `PATH` environment variable.
 
 ## What you can get
 
