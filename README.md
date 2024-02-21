@@ -5,7 +5,7 @@ LLVM IR ModulePass testbed with zero boilerplate coding. Tested with LLVM 15. It
 ## Prerequisites
 
  - LLVM 15+ (either system-wide, source-code built, or [pre-built](https://releases.llvm.org/download.html))
- - CMake 3.22.1+ (lower versions _may_ work, too)
+ - CMake 3.22.1+ (moderately lower versions _may_ work, too)
 
 ## Setup
 
