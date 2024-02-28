@@ -28,6 +28,9 @@ extern "C" ::llvm::PassPluginLibraryInfo LLVM_ATTRIBUTE_WEAK
 llvmGetPassPluginInfo() {
   return {LLVM_PLUGIN_API_VERSION, "IRTestbed", "v0.0",
     [](PassBuilder &PB) {
+      /* Register this pass to a pipeline point when you want it to be called.
+       * See the relevant doxygen for other callbacks.
+       * (https://llvm.org/doxygen/classllvm_1_1PassBuilder.html) */
       PB.registerOptimizerLastEPCallback(
         [](ModulePassManager &MPM, OptimizationLevel OL) {
           MPM.addPass(IRTestbed());
