@@ -12,7 +12,7 @@ APIs (again).
 
 ## Setup
 
-0. Download the [pre-built LLVM](https://releases.llvm.org/download.html)), unpack it, and add a path to LLVM.
+0. Download the [pre-built LLVM](https://releases.llvm.org/download.html), unpack it, and add a path to LLVM.
 
 ```
 $ export PATH=<path/to/llvm/bin/dir>:$PATH    # Ignore this if you already have LLVM.
