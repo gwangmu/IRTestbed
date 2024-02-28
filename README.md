@@ -1,13 +1,22 @@
 # Ready-made LLVM IR ModulePass testbed
 
-LLVM IR ModulePass testbed with zero boilerplate coding. Tested with LLVM 15. It probably also works with later versions unless they drastically change their APIs (again).
+LLVM IR ModulePass testbed with zero boilerplate coding. Tested with LLVM 15. It
+probably also works with later versions unless they drastically change their
+APIs (again).
 
 ## Prerequisites
 
- - LLVM 15+ (either system-wide, source-code built, or [pre-built](https://releases.llvm.org/download.html))
+ - LLVM 15+ (either system-wide, source-code built, or
+   [pre-built](https://releases.llvm.org/download.html))
  - CMake 3.22.1+ (moderately lower versions _may_ work, too)
 
 ## Setup
+
+0. Make sure to add a directory path containing `clang` in `PATH`. If not,
+
+```
+$ export PATH=<path/to/dir/with/clang>:$PATH
+```
 
 1. Clone the repository. 
 
@@ -18,16 +27,8 @@ $ cd IRTestbed
 
 2. Make.
 
-(With system-wide LLVM)
-
 ```
 $ make
-```
-
-(Without system-wide LLVM) Specify the LLVM install directory to `LLVM_ROOT` and make.
-
-```
-$ LLVM_ROOT=<absolute/path/to/llvm/install/dir> make
 ```
 
 3. Check `build` for built binaries (`tb-clang`/`tb-clang++`).
@@ -41,12 +42,9 @@ $ LLVM_ROOT=<absolute/path/to/llvm/install/dir> make
 
 ## FAQ
 
-* What is the LLVM install directory?
-    - The directory that contains `bin`, `lib`, and `include` directories
-      created after building and installing LLVM or, if you're using a prebuilt
-      binary, its root directory itself.
 * Can I move `tb-clang`/`tb-clang++` to another directory?
-    - No, unfortunately, but you can always make symbolic links to them or add a path to `build` to the `PATH` environment variable.
+    - No, unfortunately, but you can always make symbolic links to them or add a
+      path to `build` to the `PATH` environment variable.
 
 ## What you can get
 
