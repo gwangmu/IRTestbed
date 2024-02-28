@@ -12,7 +12,9 @@ APIs (again).
 
 ## Setup
 
-0. Make sure to add a directory path containing `clang` in `PATH`. If not,
+0. Make sure to add a directory path containing `clang` in `PATH`. If you have a
+   system-wide clang installed, it should be fine (as long as it's the right
+   version). If not, download the pre-built LLVM on the internet and;
 
 ```
 $ export PATH=<path/to/dir/with/clang>:$PATH
