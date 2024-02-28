@@ -21,7 +21,7 @@ $ export PATH=<path/to/llvm/bin/dir>:$PATH    # Ignore this if you already have 
 1. Clone the repository. 
 
 ```
-$ git clone git remote add origin git@github.com:gwangmu/IRTestbed.git
+$ git clone git@github.com:gwangmu/IRTestbed.git
 $ cd IRTestbed
 ```
 
