@@ -12,10 +12,10 @@ APIs (again).
 
 ## Setup
 
-0. Make sure that you have a working LLVM in your system. Try typing `llvm-config --version` on the terminal to check if your system already has a compatible (working) LLVM. If not, download the [pre-built LLVM](https://releases.llvm.org/download.html)), unpack it, and add a path to LLVM.
+0. Download the [pre-built LLVM](https://releases.llvm.org/download.html)), unpack it, and add a path to LLVM.
 
 ```
-$ export PATH=<path/to/llvm/bin/dir>:$PATH
+$ export PATH=<path/to/llvm/bin/dir>:$PATH    # Ignore this step if you already have a working (compatible) LLVM installed.
 ```
 
 1. Clone the repository. 
